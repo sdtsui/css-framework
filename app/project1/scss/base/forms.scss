@@ -1,0 +1,54 @@
+/* Form */
+input,
+select,
+textarea {
+  font-size: $fontSizeP;
+  font-weight: 300;
+}
+
+select,
+select[multiple],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="search"],
+textarea {
+  border-radius: $borderRadius;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  min-width: 35rem;
+  padding: .5rem;
+}
+
+select,
+label {
+  text-transform: capitalize;
+}
+
+label {
+  display: inline-block;
+}
+
+select {
+  height: 3rem;
+}
+
+select[multiple] {
+  overflow: hidden;
+  height: auto;
+  padding: 0;
+}
+
+select[multiple] > option { // I know this is not base but it kind of belongs here
+  padding: .5rem;
+}
+
+textarea {
+  overflow: auto;
+  min-height: 85px;
+  max-width: 100%;
+  resize: vertical;
+}

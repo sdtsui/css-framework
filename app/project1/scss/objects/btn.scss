@@ -1,0 +1,30 @@
+@mixin hoverBGColor($color) {
+  &:hover {
+    background-color: darken($color, 15%);
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  @include hoverBGColor($primary)
+}
+
+.btn-info {
+  background-color: $info;
+  @include hoverBGColor($info)
+}
+
+.btn-success {
+  background-color: $success;
+  @include hoverBGColor($success)
+}
+
+.btn-warning {
+  background-color: $warning;
+  @include hoverBGColor($warning)
+}
+
+.btn-danger {
+  background-color: $danger;
+  @include hoverBGColor($danger)
+}

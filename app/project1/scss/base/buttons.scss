@@ -1,0 +1,18 @@
+button {
+  padding: .75rem 2rem;
+  background-color: $_500;
+  border: none;
+  color: #fff;
+  border-radius: .5rem;
+  font-size: $fontSizeP;
+  font-weight: 300;
+  margin-bottom: $halfGutter;
+  &:hover {
+    cursor: pointer;
+    background-color: $_600;
+  }
+}
+
+button + button {
+  margin-left: .5rem;
+}

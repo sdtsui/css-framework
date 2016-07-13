@@ -1,0 +1,14 @@
+.container {
+  margin: 0 auto;
+  padding: 0 $gutter;
+  background-color: #fff;
+  min-height: inherit;
+}
+
+@each $mq, $size in $mediaQueries {
+  @media only screen and (min-width: $size) {
+    .container {
+      width: $size;
+    }
+  }
+}

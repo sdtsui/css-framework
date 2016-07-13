@@ -1,0 +1,24 @@
+.row.test .col:nth-of-type(even) {
+  background: $_500;
+}
+
+.row.test .col:nth-of-type(odd) {
+  background: $_700;
+}
+
+.row.test .col:nth-of-type(odd),
+.row.test .col:nth-of-type(even) {
+  min-height: 100px;
+}
+
+.row {
+  border: 1px solid red;
+}
+
+.container {
+  border: 1px solid blue;
+}
+
+.col {
+  border: 1px solid $_900;
+}

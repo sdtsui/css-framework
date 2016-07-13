@@ -1,0 +1,68 @@
+$marginDivisor: 4;
+
+/**
+* TODO // round to 2 decimal places
+* Calculates the margin by looking at the elements font-size of the text
+*/
+@mixin fontMargin($fontSize) {
+  margin: $fontSize/$marginDivisor 0;
+}
+
+/**
+* Set a default line-height for all text elements
+*/
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.2;
+}
+
+/**
+* Makes the heading text look bold but not too bold.
+*/
+h1, h2, h3, h4, h5, h6, label {
+  font-weight: 500;
+}
+
+/* Fonts */
+h1 {
+  font-size: $fontSizeH1;
+  @include fontMargin($fontSizeH1);
+}
+
+h2 {
+  font-size: $fontSizeH2;
+  @include fontMargin($fontSizeH2);
+}
+
+h3 {
+  font-size: $fontSizeH3;
+  @include fontMargin($fontSizeH3);
+}
+
+h4 {
+  font-size: $fontSizeH4;
+  @include fontMargin($fontSizeH4);
+}
+
+h5 {
+  font-size: $fontSizeH5;
+  @include fontMargin($fontSizeH5);
+}
+
+h6 {
+  font-size: $fontSizeH6;
+  @include fontMargin($fontSizeH6);
+}
+
+p, label, span {
+  font-size: $fontSizeP;
+  @include fontMargin($fontSizeP);
+}
+
+a {
+  font-size: $fontSizeA;
+  @include fontMargin($fontSizeA);
+  color: $_500;
+  &:hover {
+    color: $_800;
+  }
+}

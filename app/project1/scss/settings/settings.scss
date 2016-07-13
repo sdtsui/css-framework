@@ -1,0 +1,60 @@
+/* Material Colors */
+$textColor: #333;
+$_50: #E3F2FD;
+$_100: #BBDEFB;
+$_200: #90CAF9;
+$_300: #64B5F6;
+$_400: #42A5F5;
+$_500: #2196F3;
+$_600: #1E88E5;
+$_700: #1976D2;
+$_800: #1565C0;
+$_900: #0D47A1;
+/* Accents */
+$_a100: #EA80FC;
+$_a200: #E040FB;
+$_a400: #D500F9;
+$_a700: #AA00FF;
+
+/* Button Colors */
+$primary: #337ab7;
+$info: #5bc0de;
+$success: #5cb85c;
+$warning: #f0ad4e;
+$danger: #d9534f;
+
+/* Font */
+$fontFamily: Roboto, sans-serif;
+$fontUrl: '//fonts.googleapis.com/css?family=Roboto:400,700,300';
+
+/* Font Size */
+$fontSizeH1: 3.8rem;
+$fontSizeH2: 3.4rem;
+$fontSizeH3: 3.4rem;
+$fontSizeH4: 2.8rem;
+$fontSizeH5: 2.2rem;
+$fontSizeH6: 1.8rem;
+$fontSizeP: 1.5rem;
+$fontSizeA: 1.5rem;
+
+/* Root Font */
+$rootFont: 62.5%; // Used to increase the size of  all the fonts when using rems for font sizes.
+
+/* Grids */
+$containerWidth: 100rem;
+
+/*To use flexbox grids set to true*/
+$flexBox: true;
+
+$cols: 12;
+$gutter: 1rem;
+$mediaQueries: (
+        xs: 480px,
+        sm: 768px,
+        md: 992px,
+        lg: 1200px
+);
+
+/* default border-radius */
+$borderRadius: .5rem;
+$halfGutter: $gutter/2;

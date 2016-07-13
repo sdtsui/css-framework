@@ -1,0 +1,21 @@
+.form-group {
+  @extend %flexAndWrap;
+  flex-basis: 100%;
+  margin-bottom: $halfGutter;
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea {
+  flex-basis: 100%;
+}
+
+.form-group label {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.form-group input {
+  height: 35px;
+}
+

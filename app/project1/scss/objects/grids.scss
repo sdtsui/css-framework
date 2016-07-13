@@ -1,0 +1,60 @@
+// Mixins
+.col {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  min-height: 1px;
+}
+
+@mixin createColumn($mq,$colWidth,$i) {
+  .#{col}--#{$mq}#{$i} {
+    width: $colWidth * $i;
+  }
+}
+
+@mixin createColumnOffset($mq,$colWidth,$i) {
+  .#{col}--#{$mq}-offset-#{$i} {
+    margin-left: $colWidth * $i;
+  }
+}
+
+@mixin createColumnPull($mq,$colWidth,$i) {
+  .#{col}--#{$mq}-pull-#{$i} {
+    right: $colWidth * $i;
+  }
+}
+
+@mixin createColumnPush($mq,$colWidth,$i) {
+  .#{col}--#{$mq}-push-#{$i} {
+    left: $colWidth * $i;
+  }
+}
+
+@mixin grid($mq, $colWidth, $i) {
+  @include createColumn($mq, $colWidth, $i);
+  @include createColumnOffset($mq, $colWidth, $i);
+  @include createColumnPull($mq, $colWidth, $i);
+  @include createColumnPush($mq, $colWidth, $i);
+}
+
+// Foreach media query create the columns
+@mixin makeGrids($cols, $mediaQueries) {
+  $colWidth: (100/ $cols * 1%);
+
+  @each $mq, $size in $mediaQueries {
+
+    // render media queries
+    @media only screen and (min-width: $size) {
+      @for $i from 1 through $cols {
+        @include grid($mq, $colWidth, $i);
+      }
+    }
+  }
+}
+
+// Columns
+@include makeGrids($cols, $mediaQueries);
+
