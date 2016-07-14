@@ -1,17 +1,16 @@
 // Mixins
 .col {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
   position: relative;
   padding-right: $gutter;
   padding-left: $gutter;
   min-height: 1px;
+  float: left;
 }
 
 @mixin createColumn($mq,$colWidth,$i) {
   .#{col}--#{$mq}#{$i} {
     width: $colWidth * $i;
+    flex-basis: $colWidth * $i;
   }
 }
 
@@ -46,10 +45,18 @@
 
   @each $mq, $size in $mediaQueries {
 
-    // render media queries
-    @media only screen and (min-width: $size) {
+    @if ($mq == xs) {
       @for $i from 1 through $cols {
         @include grid($mq, $colWidth, $i);
+      }
+    }
+
+    @if ($mq != xs) {
+      // render media queries
+      @media only screen and (min-width: $size) {
+        @for $i from 1 through $cols {
+          @include grid($mq, $colWidth, $i);
+        }
       }
     }
   }

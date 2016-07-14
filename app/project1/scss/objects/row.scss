@@ -1,10 +1,8 @@
 .row {
-  width: 100%;
   position: relative;
-  @extend %flexAndWrap;
+  @extend %cf;
 }
 
 .row--expand {
   margin: 0 (-$gutter);
-  left: $gutter;
 }

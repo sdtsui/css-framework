@@ -1,7 +1,9 @@
 // Settings
 @import './settings/settings';
+
 // Tools
 @import './tools/tools';
+
 // General
 @import './general/normalize';
 @import './general/general';
@@ -17,16 +19,21 @@
 @import './objects/row';
 @import './objects/grids';
 @import './objects/btn';
+@import './objects/btn-group';
 
 // Components
-@import './components/formGroup';
-@import './components/blogPost';
+@import './components/carousel';
+@import './components/card';
+@import './components/media';
 
 // Trumps
 @import './trumps/images';
 @import './trumps/positioning'; // flex centering
-@import './trumps/flex';
 @import './trumps/padding';
+@import './trumps/text';
+@import './trumps/borders';
+@import './trumps/shadows';
+@import './trumps/misc';
 
 // Tests
 @import './tests/grid';

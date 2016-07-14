@@ -1,0 +1,41 @@
+/* Relies on the btn classes defined on another module*/
+
+.btn-group {
+  display: flex;
+  .btn {
+    flex: 1;
+    margin: 0;
+    border-radius: 0;
+
+    &:first-of-type {
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+  }
+}
+
+/* button-group @media fixed issues when resized too small */
+@media only screen and (max-width: map_get($mediaQueries, xs)) {
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    .btn {
+      flex: 1;
+      margin: 0;
+      border-radius: 0;
+
+      &:first-of-type,
+      &:last-of-type {
+        border-radius: 0;
+      }
+    }
+  }
+}
+

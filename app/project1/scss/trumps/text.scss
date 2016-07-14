@@ -1,0 +1,10 @@
+.text-block {
+  > small, em, strong, mark {
+    display: block;
+    line-height: inherit;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

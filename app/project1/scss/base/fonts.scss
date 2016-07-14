@@ -1,18 +1,14 @@
-$marginDivisor: 4;
+$marginDivisor: 5;
 
 /**
 * TODO // round to 2 decimal places
 * Calculates the margin by looking at the elements font-size of the text
 */
-@mixin fontMargin($fontSize) {
+@mixin fontProperties($fontSize) {
+  font-size: $fontSize;
   margin: $fontSize/$marginDivisor 0;
-}
-
-/**
-* Set a default line-height for all text elements
-*/
-h1, h2, h3, h4, h5, h6, p {
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: .25px;
 }
 
 /**
@@ -24,43 +20,40 @@ h1, h2, h3, h4, h5, h6, label {
 
 /* Fonts */
 h1 {
-  font-size: $fontSizeH1;
-  @include fontMargin($fontSizeH1);
+  @include fontProperties($fontSizeH1);
 }
 
 h2 {
-  font-size: $fontSizeH2;
-  @include fontMargin($fontSizeH2);
+  @include fontProperties($fontSizeH2);
 }
 
 h3 {
-  font-size: $fontSizeH3;
-  @include fontMargin($fontSizeH3);
+  @include fontProperties($fontSizeH3);
 }
 
 h4 {
-  font-size: $fontSizeH4;
-  @include fontMargin($fontSizeH4);
+  @include fontProperties($fontSizeH4);
 }
 
 h5 {
-  font-size: $fontSizeH5;
-  @include fontMargin($fontSizeH5);
+  @include fontProperties($fontSizeH5);
 }
 
 h6 {
-  font-size: $fontSizeH6;
-  @include fontMargin($fontSizeH6);
+  @include fontProperties($fontSizeH6);
 }
 
-p, label, span {
-  font-size: $fontSizeP;
-  @include fontMargin($fontSizeP);
+p, label, span, li {
+  font-weight: 300;
+  @include fontProperties($fontSizeP);
+}
+
+small {
+  font-size: 65%;
 }
 
 a {
-  font-size: $fontSizeA;
-  @include fontMargin($fontSizeA);
+  @include fontProperties($fontSizeA);
   color: $_500;
   &:hover {
     color: $_800;

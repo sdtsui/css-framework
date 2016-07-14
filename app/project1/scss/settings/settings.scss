@@ -28,23 +28,20 @@ $fontFamily: Roboto, sans-serif;
 $fontUrl: '//fonts.googleapis.com/css?family=Roboto:400,700,300';
 
 /* Font Size */
-$fontSizeH1: 3.8rem;
-$fontSizeH2: 3.4rem;
-$fontSizeH3: 3.4rem;
+$fontSizeH1: 4.0rem;
+$fontSizeH2: 3.6rem;
+$fontSizeH3: 3.2rem;
 $fontSizeH4: 2.8rem;
-$fontSizeH5: 2.2rem;
-$fontSizeH6: 1.8rem;
-$fontSizeP: 1.5rem;
-$fontSizeA: 1.5rem;
+$fontSizeH5: 2.4rem;
+$fontSizeH6: 2.0rem;
+$fontSizeP: 1.6rem;
+$fontSizeA: 1.6rem;
 
 /* Root Font */
 $rootFont: 62.5%; // Used to increase the size of  all the fonts when using rems for font sizes.
 
 /* Grids */
 $containerWidth: 100rem;
-
-/*To use flexbox grids set to true*/
-$flexBox: true;
 
 $cols: 12;
 $gutter: 1rem;
@@ -56,5 +53,5 @@ $mediaQueries: (
 );
 
 /* default border-radius */
-$borderRadius: .5rem;
+$borderRadius: 1rem;
 $halfGutter: $gutter/2;

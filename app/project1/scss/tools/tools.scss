@@ -22,3 +22,12 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+/* mixins */
+@mixin hoverZoom() {
+  &:hover {
+    transition: all .5s;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
