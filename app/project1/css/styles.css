@@ -1961,6 +1961,7 @@ button + button {
 }
 
 .nav {
+	z-index: 10; 
 	background: #1976d2;
 }
 

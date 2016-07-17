@@ -1,0 +1,9 @@
+loadComponents([
+    './components/nav.html',
+    './components/fonts.html',
+    './components/buttons.html',
+    './components/card.html',
+    './components/grids.html',
+    './components/media.html'
+  ]
+);

@@ -3,6 +3,7 @@ $linkMargin: -.5rem -1rem;
 
 .nav {
   background: $_700;
+  z-index: 10;
 }
 
 .nav__list {
