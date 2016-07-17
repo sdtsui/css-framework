@@ -25,7 +25,7 @@ var files = {
 var cssCombConfigFile = './csscomb.json';
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function () {
+gulp.task('serve', ['sass', 'babel'], function () {
 
   browserSync({
     server: project
@@ -33,8 +33,8 @@ gulp.task('serve', ['sass'], function () {
 
   gulp.watch(files.scss, ['sass']);
   gulp.watch(files.html).on('change', reload);
-  gulp.watch(files.components, ['js-watch']);
-  gulp.watch(files.js).on('change', reload);
+  gulp.watch(files.components, reload);
+  gulp.watch(files.js, ['js-watch']);
 });
 
 // Compile sass into CSS
@@ -59,9 +59,9 @@ gulp.task('sass', function () {
 
 // Compile JS to ES6
 gulp.task('babel', () => {
-  return gulp.src(project + 'app.js')
+  return gulp.src(jsDir + '*.js')
              .pipe(babel({ presets: ['es2015'] }))
-             .pipe(gulp.dest('dist'));
+             .pipe(gulp.dest(project + 'dist/js/'));
 });
 
 gulp.task('js-watch', ['babel'], browserSync.reload);
