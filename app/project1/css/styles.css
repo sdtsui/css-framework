@@ -1992,39 +1992,56 @@ button + button {
 	cursor: pointer;
 }
 
-.nav__list li ul {
-	display: none;
+.nav__list li a {
+	margin: -.5rem -1rem;
+	padding: .5rem 1rem; 
+	color: inherit;
+	text-decoration: none;
 }
 
-.nav__list li:hover ul {
-	position: absolute;
-	top: 100%;
-	left: 0; 
-	display: block;
-	width: 250px;
-}
-
-.nav__list li:hover ul li {
-	display: block;
-	border-bottom: 1px solid #ccc;
-}
-
+.nav__list li ul,
 .nav__list li:hover ul li ul {
 	display: none;
 }
 
+.nav__list li a,
+.nav__list li:hover ul,
+.nav__list li:hover ul li,
 .nav__list li:hover ul li:hover ul {
-	position: absolute;
-	top: 0; 
-	left: 100%;
 	display: block;
 }
 
-.nav.fixed {
-	position: fixed;
-	top: 0;
-	right: 0; 
+.nav__list li:hover ul,
+.nav__list li:hover ul li:hover ul {
+	position: absolute;
+}
+
+.nav.nav--is-fixed,
+.nav__list li:hover ul {
 	left: 0;
+}
+
+.nav__list li:hover ul {
+	top: 100%; 
+	width: 250px;
+}
+
+.nav__list li:hover ul li {
+	border-bottom: 1px solid #ccc;
+}
+
+.nav__list li:hover ul li:hover ul,
+.nav.nav--is-fixed {
+	top: 0;
+}
+
+.nav__list li:hover ul li:hover ul {
+	left: 100%;
+}
+
+.nav.nav--is-fixed {
+	position: fixed;
+	right: 0;
 }
 
 .img-responsive {

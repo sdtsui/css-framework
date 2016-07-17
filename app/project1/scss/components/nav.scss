@@ -1,3 +1,6 @@
+$listPadding: .5rem 1rem;
+$linkMargin: -.5rem -1rem;
+
 .nav {
   background: $_700;
 }
@@ -13,53 +16,68 @@
 .nav__list li {
   font-size: 16px;
   text-transform: capitalize;
+  padding: $listPadding;
   position: relative;
   background: $_500;
   color: #fff;
   display: inline-block;
   border-left: 1px solid #ccc;
-  padding: .5rem 1rem;
   word-spacing: normal; // unsets the parent spacing
   @include hoverable($_500);
   margin: 0;
   transition: all .1s;
 }
 
-// 2nd level
-.nav__list li ul {
-  display: none;
+.nav__list li a {
+  text-decoration: none;
+  color: inherit;
+  margin: $linkMargin;
+  padding: $listPadding
 }
 
-.nav__list li:hover ul {
-  width: 250px;
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-}
-
-.nav__list li:hover ul li {
-  display: block;
-  border-bottom: 1px solid #ccc;
-}
-
-// 3rd level
+.nav__list li ul,
 .nav__list li:hover ul li ul {
   display: none;
 }
 
-// 3rd level
+.nav__list li a,
+.nav__list li:hover ul,
+.nav__list li:hover ul li,
 .nav__list li:hover ul li:hover ul {
   display: block;
-  left: 100%;
+}
+
+.nav__list li:hover ul,
+.nav__list li:hover ul li:hover ul {
   position: absolute;
+}
+
+.nav.nav--is-fixed,
+.nav__list li:hover ul {
+  left: 0;
+}
+
+.nav__list li:hover ul {
+  width: 250px;
+  top: 100%;
+}
+
+.nav__list li:hover ul li {
+  border-bottom: 1px solid #ccc;
+}
+
+.nav__list li:hover ul li:hover ul,
+.nav.nav--is-fixed {
   top: 0;
 }
 
+// 3rd level
+.nav__list li:hover ul li:hover ul {
+  left: 100%;
+}
+
 // modifiers
-.nav.fixed {
+.nav.nav--is-fixed {
   position: fixed;
-  top: 0;
-  left: 0;
   right: 0;
 }
