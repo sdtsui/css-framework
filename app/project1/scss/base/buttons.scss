@@ -4,13 +4,10 @@ button {
   border: none;
   color: #fff;
   border-radius: .5rem;
-  font-size: $fontSizeP;
+  font-size: $fontSizeNormal;
   font-weight: 300;
   margin-bottom: $halfGutter;
-  &:hover {
-    cursor: pointer;
-    background-color: $_600;
-  }
+  @include hoverable($_500);
 }
 
 button + button {

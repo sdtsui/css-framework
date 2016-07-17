@@ -1,9 +1,13 @@
 /* Material Colors */
 /* Accents */
-/* Button Colors */
+/* Status Colors */
 /* Font */
-/* Font Size */
 /* Root Font */
+/* Font Sizes */
+/* Line Heights */
+/* Font Margins */
+/* Font weights */
+/* Word Spacing */
 /* Grids */
 /* default border-radius */
 .row {
@@ -443,8 +447,9 @@ textarea {
 
 html,
 body {
-	margin: 15px auto; 
+	margin: 15px auto;
 	min-height: 100%;
+	background: #222;
 }
 
 html {
@@ -455,90 +460,64 @@ html {
 	outline: none;
 }
 
-/**
-* TODO // round to 2 decimal places
-* Calculates the margin by looking at the elements font-size of the text
+/*
+* word-spacing - Setting word spacing here causes issues whenever someone creates
+* a class that decreases the font-size of a specific tag, and the word-space is
+* not fixed according to the new size.
 */
-/**
-* Makes the heading text look bold but not too bold.
-*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-	font-weight: 500;
-}
-
-/* Fonts */
 h1 {
-	margin: .8rem 0;
-	letter-spacing: .25px; 
-	font-size: 4rem;
-	line-height: 1.1;
+	margin: .3em 0;
+	font-weight: 400; 
+	font-size: 4em;
+	line-height: 1;
 }
 
 h2 {
-	margin: .72rem 0;
-	letter-spacing: .25px; 
-	font-size: 3.6rem;
+	margin: .26em 0;
+	font-weight: 400; 
+	font-size: 3.6em;
 	line-height: 1.1;
 }
 
 h3 {
-	margin: .64rem 0;
-	letter-spacing: .25px; 
-	font-size: 3.2rem;
-	line-height: 1.1;
+	margin: .22em 0;
+	font-weight: 400; 
+	font-size: 3.2em;
+	line-height: 1.2;
 }
 
 h4 {
-	margin: .56rem 0;
-	letter-spacing: .25px; 
-	font-size: 2.8rem;
-	line-height: 1.1;
+	margin: .18em 0;
+	font-weight: 400; 
+	font-size: 2.8em;
+	line-height: 1.3;
 }
 
 h5 {
-	margin: .48rem 0;
-	letter-spacing: .25px; 
-	font-size: 2.4rem;
-	line-height: 1.1;
+	margin: .14em 0;
+	font-weight: 400; 
+	font-size: 2.4em;
+	line-height: 1.4;
 }
 
 h6 {
-	margin: .4rem 0;
-	letter-spacing: .25px; 
-	font-size: 2rem;
-	line-height: 1.1;
+	margin: .1em 0;
+	font-weight: 400; 
+	font-size: 2em;
+	line-height: 1.5;
 }
 
-p,
-label,
-span,
+p {
+	margin: .06em 0;
+	font-weight: 300; 
+	font-size: 1.6em;
+	line-height: 1.6;
+}
+
 li {
-	margin: .32rem 0;
-	letter-spacing: .25px; 
-	font-weight: 300;
+	margin: .06em 0;
 	font-size: 1.6rem;
-	line-height: 1.1;
-}
-
-small {
-	font-size: 65%;
-}
-
-a {
-	margin: .32rem 0;
-	color: #2196f3; 
-	letter-spacing: .25px;
-	font-size: 1.6rem;
-	line-height: 1.1;
-}
-a:hover {
-	color: #1565c0;
+	line-height: 1.6;
 }
 
 /* Form */
@@ -546,7 +525,7 @@ input,
 select,
 textarea {
 	font-weight: 300; 
-	font-size: 1.6rem;
+	font-size: 1.6em;
 }
 
 select,
@@ -609,10 +588,10 @@ button {
 	background-color: #2196f3;
 	color: #fff;
 	font-weight: 300;
-	font-size: 1.6rem;
+	font-size: 1.6em;
 }
 button:hover {
-	background-color: #1e88e5; 
+	background-color: #0b72c4;
 	cursor: pointer;
 }
 
@@ -620,11 +599,40 @@ button + button {
 	margin-left: .5rem;
 }
 
+.row.test .col:nth-of-type(even) {
+	background: #2196f3;
+}
+
+.row.test .col:nth-of-type(odd) {
+	background: #1976d2;
+}
+
+.row.test .col:nth-of-type(odd),
+.row.test .col:nth-of-type(even) {
+	min-height: 100px;
+}
+
+.row {
+	border: 1px solid red;
+}
+
+.container {
+	border: 1px solid blue;
+}
+
+.col {
+	border: 1px solid #0d47a1;
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 1rem;
 	min-height: inherit; 
 	background-color: #fff;
+}
+
+.container--has-fixed-nav {
+	margin-top: 25px;
 }
 
 @media only screen and (min-width: 480px) {
@@ -1502,11 +1510,10 @@ button + button {
 	box-shadow: 1px 1px 5px #ccc; 
 	color: #fff;
 	font-weight: 300;
-	font-size: 1.6rem;
+	font-size: 1.6em;
 }
 .btn:hover {
-	background-color: #1e88e5; 
-	color: #fff;
+	background-color: #0b72c4;
 	cursor: pointer;
 }
 
@@ -1526,28 +1533,32 @@ button + button {
 	background-color: #5bc0de;
 }
 .btn-info:hover {
-	background-color: #28a1c5;
+	background-color: #27a0c3;
+	cursor: pointer;
 }
 
 .btn-success {
 	background-color: #5cb85c;
 }
 .btn-success:hover {
-	background-color: #3d8b3d;
+	background-color: #3f903f;
+	cursor: pointer;
 }
 
 .btn-warning {
 	background-color: #f0ad4e;
 }
 .btn-warning:hover {
-	background-color: #df8a13;
+	background-color: #dc8913;
+	cursor: pointer;
 }
 
 .btn-danger {
 	background-color: #d9534f;
 }
 .btn-danger:hover {
-	background-color: #b52b27;
+	background-color: #b72c27;
+	cursor: pointer;
 }
 
 /* button sizes */
@@ -1894,6 +1905,128 @@ button + button {
 	        order: 1;
 }
 
+.polaroid {
+	display: inline-block; 
+	overflow: hidden;
+	margin: 10px;
+	width: 225px;
+	height: 225px;
+	border-width: 20px 20px 60px 20px;
+	border-style: solid;
+	border-color: white;
+	box-shadow: 1px 1px 5px #222;
+}
+
+.polaroid img {
+	max-width: 100%;
+	border: 1px solid #222;
+	box-shadow: 1px 1px 5px #222;
+}
+
+.polaroid__group {
+	position: relative;
+	left: 50%;
+	display: inline-block;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+.polaroid__group.polaroid__group--stacked > .polaroid {
+	display: block;
+}
+.polaroid__group .polaroid {
+	position: relative; 
+	z-index: 2;
+}
+.polaroid__group .polaroid:first-of-type,
+.polaroid__group .polaroid:last-of-type {
+	z-index: 1;
+}
+.polaroid__group .polaroid:first-of-type {
+	-webkit-transform: rotateZ(-5deg) translateX(25px);
+	   -moz-transform: rotateZ(-5deg) translateX(25px);
+	    -ms-transform: rotate(-5deg) translateX(25px);
+	        transform: rotateZ(-5deg) translateX(25px);
+}
+.polaroid__group .polaroid:last-of-type {
+	-webkit-transform: rotateZ(5deg) translateX(-25px);
+	   -moz-transform: rotateZ(5deg) translateX(-25px);
+	    -ms-transform: rotate(5deg) translateX(-25px);
+	        transform: rotateZ(5deg) translateX(-25px);
+}
+
+.polaroid > img.polaroid--is-vintage {
+	-webkit-filter: grayscale(.6) saturate(3.7) sepia(.7);
+}
+
+.nav {
+	background: #1976d2;
+}
+
+.nav__list {
+	margin: 0;
+	min-height: 35px;
+	box-shadow: 0 1px 7px #777; 
+	word-spacing: -.3rem;
+	font-weight: 300;
+}
+
+.nav__list li {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: .5rem 1rem;
+	border-left: 1px solid #ccc;
+	background: #2196f3;
+	color: #fff;
+	text-transform: capitalize;
+	word-spacing: normal;
+	font-size: 16px;
+	-webkit-transition: all .1s;
+	   -moz-transition: all .1s;
+	        transition: all .1s;
+}
+.nav__list li:hover {
+	background-color: #0b72c4;
+	cursor: pointer;
+}
+
+.nav__list li ul {
+	display: none;
+}
+
+.nav__list li:hover ul {
+	position: absolute;
+	top: 100%;
+	left: 0; 
+	display: block;
+	width: 250px;
+}
+
+.nav__list li:hover ul li {
+	display: block;
+	border-bottom: 1px solid #ccc;
+}
+
+.nav__list li:hover ul li ul {
+	display: none;
+}
+
+.nav__list li:hover ul li:hover ul {
+	position: absolute;
+	top: 0; 
+	left: 100%;
+	display: block;
+}
+
+.nav.fixed {
+	position: fixed;
+	top: 0;
+	right: 0; 
+	left: 0;
+}
+
 .img-responsive {
 	display: block;
 	max-width: 100%;
@@ -1927,29 +2060,4 @@ button + button {
 .btn--block {
 	display: block; 
 	text-align: center;
-}
-
-.row.test .col:nth-of-type(even) {
-	background: #2196f3;
-}
-
-.row.test .col:nth-of-type(odd) {
-	background: #1976d2;
-}
-
-.row.test .col:nth-of-type(odd),
-.row.test .col:nth-of-type(even) {
-	min-height: 100px;
-}
-
-.row {
-	border: 1px solid red;
-}
-
-.container {
-	border: 1px solid blue;
-}
-
-.col {
-	border: 1px solid #0d47a1;
 }

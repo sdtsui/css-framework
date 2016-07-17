@@ -3,6 +3,10 @@
 
 // Tools
 @import './tools/tools';
+@import './tools/math';
+
+// Extenders
+@import './extenders/extenders';
 
 // General
 @import './general/normalize';
@@ -13,6 +17,9 @@
 @import './base/forms';
 @import './base/lists';
 @import './base/buttons';
+
+// Tests
+@import './tests/grid';
 
 // Objects
 @import './objects/container';
@@ -25,15 +32,16 @@
 @import './components/carousel';
 @import './components/card';
 @import './components/media';
+@import './components/polaroid';
+@import './components/nav';
+
 
 // Trumps
 @import './trumps/images';
-@import './trumps/positioning'; // flex centering
+@import './trumps/positioning';
 @import './trumps/padding';
 @import './trumps/text';
 @import './trumps/borders';
 @import './trumps/shadows';
 @import './trumps/misc';
 
-// Tests
-@import './tests/grid';

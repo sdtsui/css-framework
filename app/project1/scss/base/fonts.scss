@@ -1,61 +1,63 @@
-$marginDivisor: 5;
-
-/**
-* TODO // round to 2 decimal places
-* Calculates the margin by looking at the elements font-size of the text
+/*
+* word-spacing - Setting word spacing here causes issues whenever someone creates
+* a class that decreases the font-size of a specific tag, and the word-space is
+* not fixed according to the new size.
 */
-@mixin fontProperties($fontSize) {
-  font-size: $fontSize;
-  margin: $fontSize/$marginDivisor 0;
-  line-height: 1.1;
-  letter-spacing: .25px;
-}
 
-/**
-* Makes the heading text look bold but not too bold.
-*/
-h1, h2, h3, h4, h5, h6, label {
-  font-weight: 500;
-}
+$fonts: (
+        h1:(
+                font-size: $fontSizeXl,
+                margin: $fontMarginXl 0,
+                line-height: $lineHeightXl,
+                font-weight: $fontWeightMd,
+        ),
+        h2:(
+                font-size: $fontSizeLg,
+                margin: $fontMarginLg 0,
+                line-height: $lineHeightLg,
+                font-weight: $fontWeightMd,
+        ),
+        h3:(
+                font-size: $fontSizeMd,
+                margin: $fontMarginMd 0,
+                line-height: $lineHeightMd,
+                font-weight: $fontWeightMd,
+        ),
+        h4:(
+                font-size: $fontSizeSm,
+                margin: $fontMarginSm 0,
+                line-height: $lineHeightSm,
+                font-weight: $fontWeightMd,
+        ),
+        h5:(
+                font-size: $fontSizeXs,
+                margin: $fontMarginXs 0,
+                line-height: $lineHeightXs,
+                font-weight: $fontWeightMd,
+        ),
+        h6:(
+                font-size: $fontSizeXxs,
+                margin: $fontMarginXxs 0,
+                line-height: $lineHeightXxs,
+                font-weight: $fontWeightMd,
+        ),
+        p:(
+                font-size: $fontSizeNormal,
+                margin: $fontMarginNormal 0,
+                line-height: $lineHeightNormal,
+                font-weight: $fontWeightSm,
+        ),
+        li:(
+                font-size: 1.6rem,
+                margin: $fontMarginNormal 0,
+                line-height: $lineHeightNormal,
+        ),
+);
 
-/* Fonts */
-h1 {
-  @include fontProperties($fontSizeH1);
-}
-
-h2 {
-  @include fontProperties($fontSizeH2);
-}
-
-h3 {
-  @include fontProperties($fontSizeH3);
-}
-
-h4 {
-  @include fontProperties($fontSizeH4);
-}
-
-h5 {
-  @include fontProperties($fontSizeH5);
-}
-
-h6 {
-  @include fontProperties($fontSizeH6);
-}
-
-p, label, span, li {
-  font-weight: 300;
-  @include fontProperties($fontSizeP);
-}
-
-small {
-  font-size: 65%;
-}
-
-a {
-  @include fontProperties($fontSizeA);
-  color: $_500;
-  &:hover {
-    color: $_800;
+@each $tag, $properties in $fonts {
+  #{$tag} {
+    @each $key, $value in $properties {
+      #{$key}: #{$value}
+    }
   }
 }

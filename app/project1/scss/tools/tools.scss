@@ -23,6 +23,13 @@
   flex-wrap: wrap;
 }
 
+@mixin hoverable($color) {
+  &:hover {
+    background-color: scale_color($color, $lightness: -25%);
+    cursor: pointer;
+  }
+}
+
 /* mixins */
 @mixin hoverZoom() {
   &:hover {

@@ -5,6 +5,12 @@
   min-height: inherit;
 }
 
+// If you use a fixed nav add this class to
+// the container
+.container--has-fixed-nav {
+  margin-top: 25px;
+}
+
 @each $mq, $size in $mediaQueries {
   @media only screen and (min-width: $size) {
     .container {

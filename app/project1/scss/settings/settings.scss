@@ -1,3 +1,5 @@
+$background: #222;
+
 /* Material Colors */
 $textColor: #333;
 $_50: #E3F2FD;
@@ -16,7 +18,7 @@ $_a200: #E040FB;
 $_a400: #D500F9;
 $_a700: #AA00FF;
 
-/* Button Colors */
+/* Status Colors */
 $primary: #337ab7;
 $info: #5bc0de;
 $success: #5cb85c;
@@ -27,18 +29,49 @@ $danger: #d9534f;
 $fontFamily: Roboto, sans-serif;
 $fontUrl: '//fonts.googleapis.com/css?family=Roboto:400,700,300';
 
-/* Font Size */
-$fontSizeH1: 4.0rem;
-$fontSizeH2: 3.6rem;
-$fontSizeH3: 3.2rem;
-$fontSizeH4: 2.8rem;
-$fontSizeH5: 2.4rem;
-$fontSizeH6: 2.0rem;
-$fontSizeP: 1.6rem;
-$fontSizeA: 1.6rem;
-
 /* Root Font */
 $rootFont: 62.5%; // Used to increase the size of  all the fonts when using rems for font sizes.
+
+/* Font Sizes */
+$fontSizeXl: 4.0em;
+$fontSizeLg: 3.6em;
+$fontSizeMd: 3.2em;
+$fontSizeSm: 2.8em;
+$fontSizeXs: 2.4em;
+$fontSizeXxs: 2.0em;
+$fontSizeNormal: 1.6em;
+
+/* Line Heights */
+$lineHeightXl: 1;
+$lineHeightLg: 1.1;
+$lineHeightMd: 1.2;
+$lineHeightSm: 1.3;
+$lineHeightXs: 1.4;
+$lineHeightXxs: 1.5;
+$lineHeightNormal: 1.6;
+
+/* Font Margins */
+$fontMarginXl: .3em;
+$fontMarginLg: .26em;
+$fontMarginMd: .22em;
+$fontMarginSm: .18em;
+$fontMarginXs: .14em;
+$fontMarginXxs: .10em;
+$fontMarginNormal: .06em;
+
+/* Font weights */
+$fontWeightLg: 700;
+$fontWeightMd: 400;
+$fontWeightSm: 300;
+
+/* Word Spacing */
+$fontWordSpacingXl: .6rem;
+$fontWordSpacingLg: .4rem;
+$fontWordSpacingMd: .2rem;
+$fontWordSpacingNormal: 1rem;
+$fontWordSpacingSm: -.2rem;
+$fontWordSpacingXs: -.4rem;
+$fontWordSpacingXxs: -.6rem;
 
 /* Grids */
 $containerWidth: 100rem;

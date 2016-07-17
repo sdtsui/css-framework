@@ -1,0 +1,65 @@
+.nav {
+  background: $_700;
+}
+
+.nav__list {
+  min-height: 35px;
+  margin: 0;
+  word-spacing: -0.3rem; // closes the li gaps
+  font-weight: $fontWeightSm;
+  box-shadow: 0 1px 7px #777;
+}
+
+.nav__list li {
+  font-size: 16px;
+  text-transform: capitalize;
+  position: relative;
+  background: $_500;
+  color: #fff;
+  display: inline-block;
+  border-left: 1px solid #ccc;
+  padding: .5rem 1rem;
+  word-spacing: normal; // unsets the parent spacing
+  @include hoverable($_500);
+  margin: 0;
+  transition: all .1s;
+}
+
+// 2nd level
+.nav__list li ul {
+  display: none;
+}
+
+.nav__list li:hover ul {
+  width: 250px;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.nav__list li:hover ul li {
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+
+// 3rd level
+.nav__list li:hover ul li ul {
+  display: none;
+}
+
+// 3rd level
+.nav__list li:hover ul li:hover ul {
+  display: block;
+  left: 100%;
+  position: absolute;
+  top: 0;
+}
+
+// modifiers
+.nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}

@@ -10,16 +10,12 @@
   border: none;
   color: #fff;
   border-radius: .5rem;
-  font-size: $fontSizeP;
+  font-size: $fontSizeNormal;
   font-weight: 300;
   margin-bottom: $halfGutter;
   display: inline-block;
   box-shadow: 1px 1px 5px #ccc;
-  &:hover {
-    cursor: pointer;
-    color: #fff;
-    background-color: $_600;
-  }
+  @include hoverable($_500);
 }
 
 .btn + .btn {
@@ -34,22 +30,22 @@
 
 .btn-info {
   background-color: $info;
-  @include hoverBGColor($info)
+  @include hoverable($info);
 }
 
 .btn-success {
   background-color: $success;
-  @include hoverBGColor($success)
+  @include hoverable($success);
 }
 
 .btn-warning {
   background-color: $warning;
-  @include hoverBGColor($warning)
+  @include hoverable($warning);
 }
 
 .btn-danger {
   background-color: $danger;
-  @include hoverBGColor($danger)
+  @include hoverable($danger);
 }
 
 /* button sizes */

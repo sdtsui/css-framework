@@ -1,0 +1,15 @@
+// Adds a percent to a value and returns the new value
+@function addPercent($number, $percent) {
+  @if $percent > 100 or $percent <= 0 {
+    @warn 'addPercent expects a number between 0 and 100';
+  }
+  @return $number + ($number * ($percent * .001));
+}
+
+// Takes a percent from a value and returns the new value
+@function takePercent($number, $percent) {
+  @if $percent > 100 or $percent <= 0 {
+    @warn 'takePercent expects a number between 0 and 100';
+  }
+  @return $number - ($number * ($percent * .001));
+}

@@ -1,6 +1,51 @@
-.portraits {
+.polaroid {
+  overflow: hidden;
+  margin: 10px;
+  width: 225px;
+  height: 225px;
+  border-width: 20px 20px 60px 20px;
+  border-style: solid;
+  border-color: white;
+  box-shadow: 1px 1px 5px #222;
+  display: inline-block;
+}
 
-  > img {
+.polaroid img {
+  border: 1px solid #222;
+  max-width: 100%;
+  box-shadow: 1px 1px 5px #222;
+}
 
+.polaroid__group {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  // modifier
+  &.polaroid__group--stacked > .polaroid {
+    display: block;
   }
+
+  .polaroid {
+    z-index: 2;
+    position: relative;
+  }
+
+  .polaroid:first-of-type,
+  .polaroid:last-of-type {
+    z-index: 1;
+  }
+
+  .polaroid:first-of-type {
+    transform: rotateZ(-5deg) translateX(25px);
+  }
+
+  .polaroid:last-of-type {
+    transform: rotateZ(5deg) translateX(-25px);
+  }
+}
+
+.polaroid > img.polaroid--is-vintage {
+  -webkit-filter: grayscale(0.6) saturate(3.7) sepia(0.7);
 }
