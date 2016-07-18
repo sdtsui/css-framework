@@ -1,9 +1,21 @@
 loadComponents([
-    './components/nav.html',
-    './components/fonts.html',
-    './components/buttons.html',
-    './components/card.html',
-    './components/grids.html',
-    './components/media.html'
+    {
+      name: './components/nav.html',
+    },
+    {
+      name: './components/fonts.html',
+    },
+    {
+      name: './components/buttons.html',
+    },
+    {
+      name: './components/card.html',
+    },
+    {
+      name: './components/grids.html',
+    },
+    {
+      name: './components/media.html'
+    }
   ]
 );
