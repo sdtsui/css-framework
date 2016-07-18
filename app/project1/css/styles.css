@@ -2055,20 +2055,57 @@ button + button {
 	background: #2a2b30;
 }
 
+.dashboard__header-box {
+	margin-left: 66%;
+	width: 33%;
+	text-align: right;
+}
+
+.dashboard__icons li {
+	display: inline-block;
+	margin-left: 25px;
+	color: #5c5edc;
+}
+
 .dashboard__menu > .dashboard__header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display:    -moz-box;
+	display: -ms-flexbox;
+	display:         flex;
+	-ms-flex-pack: center;
 	color: #bdbdbd;
+
+	-webkit-align-content: center;
+	        align-content: center;
+	-webkit-box-pack: center;
+	   -moz-box-pack: center;
+	-ms-flex-line-pack: center;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+
+.dashboard__menu > .dashboard__header > .dashboard__heading {
+	margin: auto;
 }
 
 .dashboard__content > .dashboard__header {
 	color: #bdbdbd;
 }
 
+.dashboard__content > .dashboard__header > .dashboard__heading {
+	font-weight: 300;
+}
+
 .dashboard__header {
 	position: relative;
 	top: 0;
 	z-index: 2;
-	padding: 15px;
-	min-height: 125px;
+	padding: 10px 15px;
+	min-height: 110px;
 	width: 100%;
 	border-bottom: 1px solid #333;
 }
@@ -2115,6 +2152,10 @@ button + button {
 	text-decoration: none;
 }
 .dashboard__link a:hover {
+	color: #5c5edc;
+}
+
+.dashboard--primary-color {
 	color: #5c5edc;
 }
 

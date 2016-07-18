@@ -1,7 +1,8 @@
 $dashboardMenuWidth: 300px;
-$dashboardHeaderHeight: 125px;
+$dashboardHeaderHeight: 110px;
 $dashboardTextColor: #bdbdbd;
 $dashboardBorder: 1px solid #333;
+$dashboardPrimaryColor: #5c5edc;
 
 .dashboard {
   position: absolute;
@@ -12,17 +13,41 @@ $dashboardBorder: 1px solid #333;
   background: #2a2b30;
 }
 
+.dashboard__header-box {
+  width: 33%;
+  margin-left: 66%;
+  text-align: right;
+}
+
+.dashboard__icons li {
+  display: inline-block;
+  margin-left: 25px;
+  color:  $dashboardPrimaryColor;
+}
+
 .dashboard__menu > .dashboard__header {
   color: $dashboardTextColor;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.dashboard__menu > .dashboard__header > .dashboard__heading {
+  margin: auto;
 }
 
 .dashboard__content > .dashboard__header {
   color: $dashboardTextColor;
 }
 
+.dashboard__content > .dashboard__header > .dashboard__heading {
+  font-weight: 300;
+}
+
 .dashboard__header {
   position: relative;
-  padding: 15px;
+  padding: 10px 15px;
   min-height: $dashboardHeaderHeight;
   z-index: 2;
   top: 0;
@@ -69,7 +94,11 @@ $dashboardBorder: 1px solid #333;
     color: inherit;
     text-decoration: none;
     &:hover {
-      color: #5c5edc;
+      color: $dashboardPrimaryColor;
     }
   }
+}
+
+.dashboard--primary-color {
+  color: $dashboardPrimaryColor
 }
