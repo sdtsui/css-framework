@@ -35,7 +35,7 @@ const removeTagById = (id) => {
  * Changes routes or pages
  * @param route
  */
-const route = (route = './js/page2.js') => {
+const route = (route) => {
   clearDOM();
   removeTagById('page');
   const head = document.getElementsByTagName('head')[0];

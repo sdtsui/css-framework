@@ -1,0 +1,75 @@
+$dashboardMenuWidth: 300px;
+$dashboardHeaderHeight: 125px;
+$dashboardTextColor: #bdbdbd;
+$dashboardBorder: 1px solid #333;
+
+.dashboard {
+  position: absolute;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #2a2b30;
+}
+
+.dashboard__menu > .dashboard__header {
+  color: $dashboardTextColor;
+}
+
+.dashboard__content > .dashboard__header {
+  color: $dashboardTextColor;
+}
+
+.dashboard__header {
+  position: relative;
+  padding: 15px;
+  min-height: $dashboardHeaderHeight;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  border-bottom: $dashboardBorder;
+}
+
+.dashboard__menu,
+.dashboard__header {
+  background: #1c1d22;
+}
+
+.dashboard__menu {
+  position: fixed;
+  width: $dashboardMenuWidth;
+  height: 100vh;
+  background: #242425;
+}
+
+.dashboard__content {
+  margin-left: $dashboardMenuWidth;
+  min-height: 100vh;
+}
+
+.dashboard__main {
+  padding: 15px;
+}
+
+.dashboard__link {
+  font-weight: 600;
+  position: relative;
+  display: block;
+  padding: 1em 2.5em 1em 1.5em;
+  color: #bdbdbd;
+  border-bottom: $dashboardBorder;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+  text-transform: capitalize;
+  background: #1c1d22;
+  a {
+    display: block;
+    padding: 1em 2.5em 1em 1.5em;
+    margin: -1em -2.5em -1em -1.5em;
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: #5c5edc;
+    }
+  }
+}

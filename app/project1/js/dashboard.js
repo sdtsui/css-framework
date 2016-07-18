@@ -1,0 +1,4 @@
+loadComponents([
+  './components/dashboard.html'
+  ]
+);
