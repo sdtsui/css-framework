@@ -49,17 +49,18 @@ const route = (route) => {
 //run each component through the getComponent function which returns a promise
 // Once all the promises are resolved then mount the components
 loadComponents = (components) => {
-  const loadComponents = components.map(comp =>getComponent(comp));
-  Promise.all(loadComponents).then(data => data.map(component => mountComponent(component)));
+  console.log('loading', components);
+  const loadComponents = components.map(comp => getComponent(comp.name, comp.id));
+  Promise.all(loadComponents).then(data => data.map(component => mountComponent(component.data, component.id)));
 };
 
 /**
  * Promise to return a component
  */
-const getComponent = (file) => {
+const getComponent = (file, id) => {
   return fetch(file).then(response => {
       return response.text().then(data => {
-        return data;
+        return { data, id };
       });
     }
   ).catch(err => {
@@ -68,16 +69,52 @@ const getComponent = (file) => {
 };
 
 /**
+ * Appends HTML to a container
+ */
+const appendToContainer = (idName, data, target) => {
+  idName = filterID();
+  const node = document.createElement(target);
+  node.setAttribute("id", idName);
+  getContainer().appendChild(node);
+  document.querySelector('#' + idName).innerHTML = data;
+};
+
+/**
+ * Appends HTML to an element with a specific id
+ * If the id exists then it appends to it.
+ * If it does not exist then it creates a new one and
+ * appends to the container
+ */
+const appendToId = (idName, data, target) => {
+  const nodeExists = document.querySelector('#' + idName);
+  if (nodeExists) {
+    const node = document.createElement(target);
+    node.innerHTML = data;
+    nodeExists.appendChild(node);
+  } else {
+    const node = document.createElement(target);
+    node.setAttribute("id", idName);
+    getContainer().appendChild(node);
+    document.querySelector('#' + idName).innerHTML = data;
+  }
+};
+
+/**
  * Mounts a component to a page
  * @param data
  * @param target
  * @param idName
  */
-const mountComponent = (data, target = 'DIV', idName = filterID()) => {
-  // create the div where we are going to put the component
-  const node = document.createElement(target);
-  node.setAttribute("id", idName);
-  getContainer().appendChild(node);
+const mountComponent = (data, idName, target = 'DIV') => {
+  // check if the id already exists
 
-  document.querySelector('#' + idName).innerHTML = data;
+  // only runs if you do not specify an id. It appends to the
+  // container by default
+  if (!idName) {
+    appendToContainer(idName, data, target);
+    return;
+  }
+
+  // Appends item to the specific element that has the specific id
+  appendToId(idName, data, target);
 };

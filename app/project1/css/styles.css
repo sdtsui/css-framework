@@ -2117,13 +2117,13 @@ button + button {
 
 .dashboard__menu {
 	position: fixed;
-	width: 300px;
+	width: 250px;
 	height: 100vh;
 	background: #242425;
 }
 
 .dashboard__content {
-	margin-left: 300px;
+	margin-left: 250px;
 	min-height: 100vh;
 }
 
@@ -2134,25 +2134,26 @@ button + button {
 .dashboard__link {
 	position: relative;
 	display: block;
-	padding: 1em 2.5em 1em 1.5em;
+	padding: 15px 20px;
 	border-bottom: 1px solid #333;
-	background: #1c1d22; 
+	background: #1c1d22;
 	color: #bdbdbd;
 	text-transform: capitalize;
-	font-weight: 600;
+	letter-spacing: 1px; 
+	font-weight: 400;
 	-webkit-transition: color .1s;
 	   -moz-transition: color .1s;
 	        transition: color .1s;
 }
 .dashboard__link a {
 	display: block;
-	margin: -1em -2.5em -1em -1.5em;
-	padding: 1em 2.5em 1em 1.5em;
+	margin: -1em -1.5em -1em -1.5em;
+	padding: 15px 20px;
 	color: inherit;
 	text-decoration: none;
 }
 .dashboard__link a:hover {
-	color: #5c5edc;
+	background: #2a2b30;
 }
 
 .dashboard--primary-color {

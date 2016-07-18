@@ -1,8 +1,9 @@
-$dashboardMenuWidth: 300px;
+$dashboardMenuWidth: 250px;
 $dashboardHeaderHeight: 110px;
 $dashboardTextColor: #bdbdbd;
 $dashboardBorder: 1px solid #333;
 $dashboardPrimaryColor: #5c5edc;
+$dashboardLinkPadding: 15px 20px;
 
 .dashboard {
   position: absolute;
@@ -22,7 +23,7 @@ $dashboardPrimaryColor: #5c5edc;
 .dashboard__icons li {
   display: inline-block;
   margin-left: 25px;
-  color:  $dashboardPrimaryColor;
+  color: $dashboardPrimaryColor;
 }
 
 .dashboard__menu > .dashboard__header {
@@ -77,24 +78,25 @@ $dashboardPrimaryColor: #5c5edc;
 }
 
 .dashboard__link {
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   display: block;
-  padding: 1em 2.5em 1em 1.5em;
+  padding: $dashboardLinkPadding;
   color: #bdbdbd;
   border-bottom: $dashboardBorder;
   -webkit-transition: color 0.1s;
   transition: color 0.1s;
   text-transform: capitalize;
   background: #1c1d22;
+  letter-spacing: 1px;
   a {
     display: block;
-    padding: 1em 2.5em 1em 1.5em;
-    margin: -1em -2.5em -1em -1.5em;
+    padding: $dashboardLinkPadding;
+    margin: -1em -1.5em -1em -1.5em;
     color: inherit;
     text-decoration: none;
     &:hover {
-      color: $dashboardPrimaryColor;
+      background: #2a2b30;
     }
   }
 }
