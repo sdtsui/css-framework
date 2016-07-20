@@ -1,6 +1,7 @@
 /* Material Colors */
 /* Accents */
 /* Status Colors */
+/* grey colors */
 /* Font */
 /* Root Font */
 /* Font Sizes */
@@ -1963,13 +1964,13 @@ button + button {
 
 .nav {
 	z-index: 10; 
-	background: #1976d2;
+	background: #242425;
 }
 
 .nav__list {
 	margin: 0;
-	min-height: 35px;
-	box-shadow: 0 1px 7px #777; 
+	min-height: 30px;
+	box-shadow: 0 1px 7px #444; 
 	word-spacing: -.3rem;
 	font-weight: 300;
 }
@@ -1979,19 +1980,22 @@ button + button {
 	display: inline-block;
 	margin: 0;
 	padding: .5rem 1rem;
-	border-left: 1px solid #ccc;
-	background: #2196f3;
+	border-left: 1px solid #2a2b30;
+	background: #bf0000;
 	color: #fff;
 	text-transform: capitalize;
 	word-spacing: normal;
-	font-size: 16px;
+	font-size: 13px;
 	-webkit-transition: all .1s;
 	   -moz-transition: all .1s;
 	        transition: all .1s;
 }
 .nav__list li:hover {
-	background-color: #0b72c4;
+	background-color: #202024;
 	cursor: pointer;
+}
+.nav__list li:last-of-type {
+	border-right: 1px solid #2a2b30;
 }
 
 .nav__list li a {
@@ -2029,7 +2033,7 @@ button + button {
 }
 
 .nav__list li:hover ul li {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #2a2b30;
 }
 
 .nav__list li:hover ul li:hover ul,
@@ -2044,6 +2048,10 @@ button + button {
 .nav.nav--is-fixed {
 	position: fixed;
 	right: 0;
+}
+
+.container--has-fixed-nav .dashboard {
+	top: 35px;
 }
 
 .dashboard {
@@ -2068,28 +2076,12 @@ button + button {
 }
 
 .dashboard__menu > .dashboard__header {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display:    -moz-box;
-	display: -ms-flexbox;
-	display:         flex;
-	-ms-flex-pack: center;
 	color: #bdbdbd;
-
-	-webkit-align-content: center;
-	        align-content: center;
-	-webkit-box-pack: center;
-	   -moz-box-pack: center;
-	-ms-flex-line-pack: center;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	-webkit-justify-content: center;
-	        justify-content: center;
 }
 
 .dashboard__menu > .dashboard__header > .dashboard__heading {
-	margin: auto;
+	margin-top: 28px;
+	margin-bottom: 0;
 }
 
 .dashboard__content > .dashboard__header {
@@ -2137,7 +2129,7 @@ button + button {
 	padding: 15px 20px;
 	border-bottom: 1px solid #333;
 	background: #1c1d22;
-	color: #bdbdbd;
+	color: #999;
 	text-transform: capitalize;
 	letter-spacing: 1px; 
 	font-weight: 400;
@@ -2149,7 +2141,7 @@ button + button {
 	display: block;
 	margin: -1em -1.5em -1em -1.5em;
 	padding: 15px 20px;
-	color: inherit;
+	color: #999;
 	text-decoration: none;
 }
 .dashboard__link a:hover {

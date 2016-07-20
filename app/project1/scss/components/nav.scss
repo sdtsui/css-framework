@@ -1,32 +1,38 @@
 $listPadding: .5rem 1rem;
 $linkMargin: -.5rem -1rem;
+$linkColor: #fff;
+$linkBackgroundColor: #bf0000;
+$navBorderColor: #2A2B30;
 
 .nav {
-  background: $_700;
+  background: #242425;
   z-index: 10;
 }
 
 .nav__list {
-  min-height: 35px;
+  min-height: 30px;
   margin: 0;
   word-spacing: -0.3rem; // closes the li gaps
   font-weight: $fontWeightSm;
-  box-shadow: 0 1px 7px #777;
+  box-shadow: 0 1px 7px #444444;
 }
 
 .nav__list li {
-  font-size: 16px;
+  font-size: 13px;
   text-transform: capitalize;
   padding: $listPadding;
   position: relative;
-  background: $_500;
-  color: #fff;
+  background: $linkBackgroundColor;
+  color: $linkColor;
   display: inline-block;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid $navBorderColor;
   word-spacing: normal; // unsets the parent spacing
-  @include hoverable($_500);
+  @include hoverable(#2A2B30);
   margin: 0;
   transition: all .1s;
+  &:last-of-type {
+    border-right: 1px solid $navBorderColor;;
+  }
 }
 
 .nav__list li a {
@@ -64,7 +70,7 @@ $linkMargin: -.5rem -1rem;
 }
 
 .nav__list li:hover ul li {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $navBorderColor;
 }
 
 .nav__list li:hover ul li:hover ul,

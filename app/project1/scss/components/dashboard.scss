@@ -4,6 +4,12 @@ $dashboardTextColor: #bdbdbd;
 $dashboardBorder: 1px solid #333;
 $dashboardPrimaryColor: #5c5edc;
 $dashboardLinkPadding: 15px 20px;
+$linkColor: $_g900;
+
+
+.container--has-fixed-nav .dashboard {
+  top: 35px;
+}
 
 .dashboard {
   position: absolute;
@@ -28,14 +34,11 @@ $dashboardLinkPadding: 15px 20px;
 
 .dashboard__menu > .dashboard__header {
   color: $dashboardTextColor;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
 }
 
 .dashboard__menu > .dashboard__header > .dashboard__heading {
-  margin: auto;
+  margin-top: 28px;
+  margin-bottom: 0;
 }
 
 .dashboard__content > .dashboard__header {
@@ -82,7 +85,7 @@ $dashboardLinkPadding: 15px 20px;
   position: relative;
   display: block;
   padding: $dashboardLinkPadding;
-  color: #bdbdbd;
+  color: $linkColor;
   border-bottom: $dashboardBorder;
   -webkit-transition: color 0.1s;
   transition: color 0.1s;
@@ -93,7 +96,7 @@ $dashboardLinkPadding: 15px 20px;
     display: block;
     padding: $dashboardLinkPadding;
     margin: -1em -1.5em -1em -1.5em;
-    color: inherit;
+    color: $linkColor;
     text-decoration: none;
     &:hover {
       background: #2a2b30;
