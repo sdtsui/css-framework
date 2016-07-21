@@ -450,7 +450,7 @@ html,
 body {
 	margin: 15px auto;
 	min-height: 100%;
-	background: #222;
+	background: green;
 }
 
 html {
@@ -469,7 +469,7 @@ html {
 h1 {
 	margin: .3em 0;
 	font-weight: 400; 
-	font-size: 4em;
+	font-size: 5em;
 	line-height: 1;
 }
 
@@ -1525,33 +1525,33 @@ button + button {
 
 /* button colors */
 .btn-primary {
-	background-color: #337ab7;
+	background-color: pink;
 }
 .btn-primary:hover {
-	background-color: #22527b;
+	background-color: #ff748c;
 }
 
 .btn-info {
-	background-color: #5bc0de;
+	background-color: purple;
 }
 .btn-info:hover {
-	background-color: #27a0c3;
+	background-color: #600060;
 	cursor: pointer;
 }
 
 .btn-success {
-	background-color: #5cb85c;
+	background-color: red;
 }
 .btn-success:hover {
-	background-color: #3f903f;
+	background-color: #bf0000;
 	cursor: pointer;
 }
 
 .btn-warning {
-	background-color: #f0ad4e;
+	background-color: red;
 }
 .btn-warning:hover {
-	background-color: #dc8913;
+	background-color: #bf0000;
 	cursor: pointer;
 }
 
