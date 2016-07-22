@@ -1,0 +1,11 @@
+I think that a variable based approach would be better because you can scope
+specific components to listen to the variables that you want and react
+ accordingly. When I mean react accordingly i mean that you can apply changes
+ to a component if you decide to listen to the changes if not then the css
+ component will stay the same
+
+ A requirement for this is having DEFINED!! components that have a top most
+ css class that can identify and SCOPE this group of elements into their own
+ html group of code.
+
+

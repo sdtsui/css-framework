@@ -450,7 +450,7 @@ html,
 body {
 	margin: 15px auto;
 	min-height: 100%;
-	background: green;
+	background: red;
 }
 
 html {
@@ -468,21 +468,24 @@ html {
 */
 h1 {
 	margin: .3em 0;
-	font-weight: 400; 
-	font-size: 5em;
+	color: #333; 
+	font-weight: 400;
+	font-size: 4em;
 	line-height: 1;
 }
 
 h2 {
 	margin: .26em 0;
-	font-weight: 400; 
+	color: #333; 
+	font-weight: 400;
 	font-size: 3.6em;
 	line-height: 1.1;
 }
 
 h3 {
 	margin: .22em 0;
-	font-weight: 400; 
+	color: #333; 
+	font-weight: 400;
 	font-size: 3.2em;
 	line-height: 1.2;
 }
@@ -1525,33 +1528,33 @@ button + button {
 
 /* button colors */
 .btn-primary {
-	background-color: pink;
+	background-color: #337ab7;
 }
 .btn-primary:hover {
-	background-color: #ff748c;
+	background-color: #22527b;
 }
 
 .btn-info {
-	background-color: purple;
+	background-color: #5bc0de;
 }
 .btn-info:hover {
-	background-color: #600060;
+	background-color: #27a0c3;
 	cursor: pointer;
 }
 
 .btn-success {
-	background-color: red;
+	background-color: #5cb85c;
 }
 .btn-success:hover {
-	background-color: #bf0000;
+	background-color: #3f903f;
 	cursor: pointer;
 }
 
 .btn-warning {
-	background-color: red;
+	background-color: #f0ad4e;
 }
 .btn-warning:hover {
-	background-color: #bf0000;
+	background-color: #dc8913;
 	cursor: pointer;
 }
 
@@ -1708,9 +1711,10 @@ button + button {
 	display:         flex;
 	-webkit-flex-direction: column;
 	    -ms-flex-direction: column;
-	        flex-direction: column; 
+	        flex-direction: column;
 	margin: 5px;
 	min-height: 400px;
+	background: red; 
 
 	-webkit-box-direction: normal;
 	   -moz-box-direction: normal;
@@ -1981,7 +1985,7 @@ button + button {
 	margin: 0;
 	padding: .5rem 1rem;
 	border-left: 1px solid #2a2b30;
-	background: #bf0000;
+	background: green;
 	color: #fff;
 	text-transform: capitalize;
 	word-spacing: normal;
