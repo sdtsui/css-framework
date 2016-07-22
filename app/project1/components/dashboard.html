@@ -5,9 +5,19 @@
     </header>
     <nav>
       <ul>
-        <li class="dashboard__link"><a onclick="route('./dist/js/main.js')">Settings</a></li>
-        <li class="dashboard__link"><a onclick="route('./dist/js/main.js')">Back</a></li>
+        <li class="dashboard__link"><a onclick="route('./dist/js/main.js')">Settings</a>
+        </li>
+        <li class="dashboard__link"><a
+          onclick="route('./dist/js/main.js')">Back</a></li>
       </ul>
+    </nav>
+    <nav class="hide">
+      <div>
+        <input id="background" type="text" value="red"/>
+        <button onclick="submitForm()">
+          Submit
+        </button>
+      </div>
     </nav>
   </section>
   <section class="dashboard__content">

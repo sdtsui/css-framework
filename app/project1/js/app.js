@@ -118,3 +118,16 @@ const mountComponent = (data, idName, target = 'DIV') => {
   // Appends item to the specific element that has the specific id
   appendToId(idName, data, target);
 };
+
+const submitForm = () => {
+
+  fetch('http://localhost:3010/compile', {
+    method: 'post',
+    headers: new Headers({
+      'Content-Type': 'Application/json'
+    }),
+    body: JSON.stringify({
+      $background: document.querySelector('#background').value,
+    })
+  });
+};

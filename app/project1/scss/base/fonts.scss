@@ -10,18 +10,21 @@ $fonts: (
                 margin: $fontMarginXl 0,
                 line-height: $lineHeightXl,
                 font-weight: $fontWeightMd,
+                color: $textColor
         ),
         h2:(
                 font-size: $fontSizeLg,
                 margin: $fontMarginLg 0,
                 line-height: $lineHeightLg,
                 font-weight: $fontWeightMd,
+                color: $textColor
         ),
         h3:(
                 font-size: $fontSizeMd,
                 margin: $fontMarginMd 0,
                 line-height: $lineHeightMd,
                 font-weight: $fontWeightMd,
+                color: $textColor
         ),
         h4:(
                 font-size: $fontSizeSm,
